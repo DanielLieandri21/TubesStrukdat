@@ -12,41 +12,39 @@
 #define last(L) ((L).last)
 using namespace std;
 
-typedef film infotypefilm;
 typedef struct elmlist_film *addressfilm;
+typedef struct elmlist_relasi *addressrelasi;
+typedef struct elmlist_artis *addressartis;
 struct film{
     string namafilm;
     int tahun_terbit;
 };
+struct artis{
+    string namaartis;
+    int tahun_lahir;
+};
+typedef film infotypefilm;
+typedef artis infotypeartis;
 struct elmlist_film {
     infotypefilm info;
     addressfilm next;
     addressfilm prev;
     addressrelasi relasi;
 };
-struct listfilm{
-    addressfilm first;
-    addressfilm last;
-};
-
-typedef artis infotypeartis;
-typedef struct elmlist_artis *addressartis;
-struct artis{
-    string namaartis;
-    int tahun_lahir;
-};
 struct elmlist_artis {
     infotypeartis info;
     addressartis next;
 };
-struct listartis{
-    addressartis first;
-};
-
-typedef struct elmlist_relasi *addressrelasi;
 struct elmlist_relasi {
     addressartis nextartis;
     addressrelasi next;
+};
+struct listartis{
+    addressartis first;
+};
+struct listfilm{
+    addressfilm first;
+    addressfilm last;
 };
 
 void createListfilm(listfilm &L);
