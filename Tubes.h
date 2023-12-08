@@ -50,14 +50,14 @@ struct listfilm{
 
 void createListfilm(listfilm &L);
 void createListartis(listartis &L);
-addressfilm alokasifilm(string nama, int tahun);
+addressfilm alokasifilm(string nama, int tahun, addressrelasi Q);
 addressartis alokasiartis(string nama, int tahun);
-addressrelasi createElmRelasi(addressartis A);
+addressrelasi createElmRelasi(addressartis Q);
 void insertFirstfilm(listfilm &L, addressfilm P);
-void insertLastfilm(listfilm &L, addressfilm P, addressrelasi Q);
-void insertAfterfilm(listfilm &L, addressfilm P, addressfilm Y, addressfilm Prec, addressrelasi Q);
-void insertFirstartis(listartis &L, addressartis P, addressrelasi Q);
-void insertLastartis(listartis &L, addressartis P, addressartis Y, addressrelasi Q);
-void insertAfterartis(listartis &L, addressartis P, addressartis Y, addressartis Prec, addressrelasi Q);
+void insertLastfilm(listfilm &L, addressfilm P);
+void insertAfterfilm(listfilm &L, addressfilm P, addressfilm Y, addressfilm Prec);
+void insertFirstartis(listartis &L, addressartis P);
+void insertLastartis(listartis &L, addressartis P, addressartis Y);
+void insertAfterartis(listartis &L, addressartis P, addressartis Y, addressartis Prec);
 
 #endif
