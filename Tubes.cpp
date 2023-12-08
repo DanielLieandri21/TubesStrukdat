@@ -24,13 +24,13 @@ addressartis alokasiartis(string nama, int tahun){
     next(P) = NULL;
     return P;
 }
-addressrelasi createElmRelasi(addressartis A){
+addressrelasi createElmRelasi(addressartis Q){
     addressrelasi P = new elmlist_relasi;
-    nextartis(P) = A;
+    nextartis(P) = Q;
     next(P) = NULL;
     return P;
 }
-void insertFirstfilm(listfilm &L, addressfilm P, addressrelasi Q){
+void insertFirstfilm(listfilm &L, addressfilm P){
     if (first(L) == NULL && last(L) == NULL){
         first(L) = P;
         last(L) = P;
@@ -40,10 +40,9 @@ void insertFirstfilm(listfilm &L, addressfilm P, addressrelasi Q){
         next(last(L)) = P;
         prev(first(L)) = P;
         first(L) = P;
-        relasi(L) = Q;
     }
 }
-void insertLastfilm(listfilm &L, addressfilm P, addressrelasi Q){
+void insertLastfilm(listfilm &L, addressfilm P){
     if (first(L) == NULL && last(L) == NULL){
         first(L) = P;
         last(L) = P;
@@ -53,10 +52,9 @@ void insertLastfilm(listfilm &L, addressfilm P, addressrelasi Q){
         next(last(L)) = P;
         prev(first(L)) = P;
         last(L) = P;
-        relasi(L) = Q;
     }
 }
-void insertAfterfilm(listfilm &L, addressfilm P, addressfilm Y, addressfilm Prec, addressrelasi Q){
+void insertAfterfilm(listfilm &L, addressfilm P, addressfilm Y, addressfilm Prec){
     if (first(L) == NULL && last(L) == NULL){
         first(L) = P;
         last(L) = P;
@@ -69,19 +67,17 @@ void insertAfterfilm(listfilm &L, addressfilm P, addressfilm Y, addressfilm Prec
         prev(P) = Prec;
         next(Prec) = P;
         prev(next(Prec)) = P;
-        relasi(L) = Q;
     }
 }
-void insertFirstartis(listartis &L, addressartis P, addressrelasi Q){
+void insertFirstartis(listartis &L, addressartis P){
     if (first(L) == NULL){
         first(L) = P;
     }else{
         next(P) = first(L);
         first(L) = P;
-        Q = nextartis(P);
     }
 }
-void insertLastartis(listartis &L, addressartis P, addressartis Y, addressrelasi Q){
+void insertLastartis(listartis &L, addressartis P, addressartis Y){
     if (first(L) == NULL){
         first(L) = P;
     }else{
@@ -90,10 +86,9 @@ void insertLastartis(listartis &L, addressartis P, addressartis Y, addressrelasi
             Y = next(Y);
         }
         next(Y) = P;
-        Q = nextartis(P);
     }
 }
-void insertAfterartis(listartis &L, addressartis P, addressartis Y, addressartis Prec, addressrelasi Q){
+void insertAfterartis(listartis &L, addressartis P, addressartis Y, addressartis Prec){
     if (first(L) == NULL){
         first(L) = P;
     }else{
@@ -103,6 +98,5 @@ void insertAfterartis(listartis &L, addressartis P, addressartis Y, addressartis
         }
         next(P) = next(Prec);
         next(Prec) = P;
-        Q = nextartis(P);
     }
 }
