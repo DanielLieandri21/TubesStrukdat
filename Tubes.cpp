@@ -27,7 +27,7 @@ addressartis alokasiartis(string nama, int tahun){
 addressrelasi createElmRelasi(addressartis A){
     addressrelasi P = new elmlist_relasi;
     nextartis(P) = A;
-    next(P) = Null;
+    next(P) = NULL;
     return P;
 }
 void insertFirstfilm(listfilm &L, addressfilm P, addressrelasi Q){
