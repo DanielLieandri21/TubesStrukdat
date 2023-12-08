@@ -6,6 +6,7 @@
 #define Nil NULL
 #define info(P) (P)->info
 #define next(P) (P)->next
+#define nextartis(P) (P)->nextartis
 #define prev(P) (P)->prev
 #define relasi(P) (P)->relasi
 #define first(L) ((L).first)
