@@ -7,6 +7,7 @@
 #define info(P) (P)->info
 #define next(P) (P)->next
 #define prev(P) (P)->prev
+#define relasi(P) (P)->relasi
 #define first(L) ((L).first)
 #define last(L) ((L).last)
 using namespace std;
@@ -50,11 +51,11 @@ struct elmlist_relasi {
 
 void createListfilm(listfilm &L);
 void createListartis(listartis &L);
-void createListrelasi(listrelasi &L);
 addressfilm alokasifilm(string nama, int tahun);
 addressartis alokasiartis(string nama, int tahun);
 addressrelasi createElmRelasi(addressartis A);
 void insertFirstfilm(listfilm &L, addressfilm P);
 void insertLastfilm(listfilm &L, addressfilm P, addressrelasi Q);
+void insertAfterfilm(listfilm &L, addressfilm P, addressfilm Y, addressfilm Prec, addressrelasi Q);
 
 #endif
