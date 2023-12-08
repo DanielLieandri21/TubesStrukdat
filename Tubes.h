@@ -57,5 +57,8 @@ addressrelasi createElmRelasi(addressartis A);
 void insertFirstfilm(listfilm &L, addressfilm P);
 void insertLastfilm(listfilm &L, addressfilm P, addressrelasi Q);
 void insertAfterfilm(listfilm &L, addressfilm P, addressfilm Y, addressfilm Prec, addressrelasi Q);
+void insertFirstartis(listartis &L, addressartis P, addressrelasi Q);
+void insertLastartis(listartis &L, addressartis P, addressartis Y, addressrelasi Q);
+void insertAfterartis(listartis &L, addressartis P, addressartis Y, addressartis Prec, addressrelasi Q);
 
 #endif
