@@ -47,9 +47,13 @@ struct listfilm{
     addressfilm first;
     addressfilm last;
 };
+struct listrelasi{
+    addressrelasi first;
+};
 
 void createList_Film(listfilm &L);
 void createList_Artis(listartis &L);
+void createList_Relasi(listrelasi &L);
 addressfilm alokasi_Film(string nama, int tahun, addressrelasi Q);
 addressartis alokasi_Artis(string nama, int tahun);
 addressrelasi createElm_Relasi(addressartis Q);
@@ -59,12 +63,23 @@ void insertAfter_Film(listfilm &L, addressfilm P, addressfilm Y, addressfilm Pre
 void insertFirst_Artis(listartis &L, addressartis P);
 void insertLast_Artis(listartis &L, addressartis P, addressartis Y);
 void insertAfter_Artis(listartis &L, addressartis P, addressartis Y, addressartis Prec);
+void insertFirst_Relasi(listrelasi &L, addressrelasi P);
+void insertLast_Relasi(listrelasi &L, addressrelasi P,addressrelasi Y);
+void insertAfter_Relasi(listrelasi &L, addressrelasi P, addressrelasi Y, addressrelasi Prec);
 void deleteFirst_Film(listfilm &L, addressfilm P, addressfilm Q);
 void deleteLast_Film(listfilm &L, addressfilm P, addressfilm Q);
 void deleteAfter_Film(listfilm &L, addressfilm P, addressfilm Q, addressfilm Prec);
 void deleteFirst_Artis(listartis &L, addressartis P);
 void deleteLast_Artis(listartis &L, addressartis P, addressartis Q);
 void deleteAfter_Artis(listartis &L, addressartis P, addressartis Q, addressartis Prec);
+void deleteFirst_Relasi(listrelasi &L, addressrelasi P);
+void deleteLast_Relasi(listrelasi &L, addressrelasi P, addressrelasi Q);
+void deleteAfter_Relasi(listrelasi &L, addressrelasi P, addressrelasi Q, addressrelasi Prec);
+void printInfo_Film(listfilm L,  addressrelasi Q);
+void printInfo_Artis(listartis L);
+addressfilm findElm_Film(listfilm L, infotypefilm Q);
+addressartis findElm_Artis(listartis L, infotypeartis x);
+addressrelasi findElm_Relasi(listrelasi L, addressartis C);
 
 
 #endif
