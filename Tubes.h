@@ -17,12 +17,12 @@ typedef struct elmlist_film *addressfilm;
 typedef struct elmlist_relasi *addressrelasi;
 typedef struct elmlist_artis *addressartis;
 struct film{
-    string namafilm;
-    int tahun_terbit;
+    string namaFilm;
+    int tahun_Terbit;
 };
 struct artis{
-    string namaartis;
-    int tahun_lahir;
+    string namaArtis;
+    int tahun_Lahir;
 };
 typedef film infotypefilm;
 typedef artis infotypeartis;
