@@ -311,33 +311,27 @@ void printInfo_Artis(listartis L){
         P = next(P);
     }
 }
-addressfilm findElm_Film(listfilm L, addressfilm Q){
+addressfilm findElm_Film(listfilm L, infotypefilm x) {
     addressfilm P = first(L);
-    while(next(P) != first(L)){
-        if(P == Q) {
-            return P;
-        }
-        P = next(P);
+    if (P != NULL) {
+        do {
+            if(info(P).namaFilm == x.namaFilm && info(P).tahun_Terbit == x.tahun_Terbit ) {
+                return P;
+            }
+            P = next(P);
+        } while(P != first(L));
     }
-     return NULL;
+    return P;
 }
-addressartis findElm_Artis(listartis L, addressartis x){
+addressartis findElm_Artis(listartis L, infotypeartis x) {
     addressartis P = first(L);
-    while(P != NULL) {
-        if(P == x) {
-            return P;
-        }
-        P = next(P);
+    if (P != NULL) {
+        do {
+            if(info(P).namaArtis == x.namaArtis && info(P).tahun_Lahir == x.tahun_Lahir ) {
+                return P;
+            }
+            P = next(P);
+        } while(P != first(L));
     }
-    return NULL;
-}
-addressrelasi findElm_Relasi(listrelasi L, addressartis C){
-    addressrelasi P = first(L);
-    while(P != NULL) {
-        if(nextartis(P) == C) {
-            return P;
-        }
-        P = next(P);
-    }
-    return NULL;
+    return P;
 }
