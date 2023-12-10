@@ -79,7 +79,6 @@ void printInfo_Film(listfilm L,  addressrelasi Q);
 void printInfo_Artis(listartis L);
 addressfilm findElm_Film(listfilm L, infotypefilm Q);
 addressartis findElm_Artis(listartis L, infotypeartis x);
-addressrelasi findElm_Relasi(listrelasi L, addressartis C);
 
 
 #endif
